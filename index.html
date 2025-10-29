@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taupun</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e0e0e0;
+            text-align: center;
+            min-height: 100vh;
+            line-height: 1.6; /* Better readability */
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: bounce 2s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: #bb86fc;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: rgba(187, 134, 252, 0.2);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .profile {
+            background-color: rgba(40, 40, 40, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            max-width: 320px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #555;
+            animation: slideIn 1.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .profile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+        }
+        .profile img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #666;
+        }
+        .profile h2 {
+            margin-top: 15px;
+            color: #bb86fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.5em; /* Larger for readability */
+        }
+        .profile h2 img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .profile p {
+            margin: 15px 0;
+            line-height: 1.6;
+            color: #c0c0c0;
+            font-size: 1.1em; /* Slightly larger text */
+        }
+        .profile a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 15px 25px; /* Larger buttons for touch */
+            background-color: #4267B2;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            animation: pulse 2s infinite;
+            font-size: 1.1em; /* Bigger text on buttons */
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .profile a:hover {
+            background-color: #365899;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #bb86fc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: none; /* Hidden by default, show on scroll */
+        }
+        .back-to-top.show {
+            display: block;
+        }
+    </style>
+    <script>
+        // Simple script for back-to-top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <h1>
+       BATAH LIMPAPA
+    </h1>
+    <div class="container">
+        <!-- Your Profile -->
+        <div class="profile" id="profile1">
+            <img src="alim.jpg" alt="Your Picture">
+            <h2>
+                ALIM, ABSAR T.
+            </h2>
+            <p>MUBARAK TO OUR NEW GRAND MUFTI 
+Graduated from Limpapa Bridge Inc.Congratulations to our newly appointed Grand Mufti of Region IX & Palawan .
+Shaykh Alim Absar.Grand Mufti of PHILIPPINES.
+            <a href="https://www.facebook.com/rasba.mila.26" target="_blank">ADD nyu ha ako FACEBOOOK</a>
+        </div>
+        
+        <!-- Friend's Profile -->
+      <!--  <div class="profile" id="profile2">
+            <img src="https://via.placeholder.com/300x200?text=Friend%27s+Picture" alt="Friend's Picture">
+            <h2>
+                <img src="https://via.placeholder.com/30x30?text=F" alt="Friend Icon"> Friend's Name
+            </h2>
+            <p>Description: [Add a short bio or description here, e.g., "My friend enjoys gaming and travel."]</p>
+            <a href="https://www.facebook.com/friendusername" target="_blank">Visit Their Facebook</a>
+        </div>
+    </div> -->
+    <a href="#" class="back-to-top" title="Back to Top">↑</a>
+</body>
+</html>
